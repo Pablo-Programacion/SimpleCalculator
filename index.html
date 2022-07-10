@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 
+        Las lineas de mi HTML de la 8 a la 30 son fuentes de google: https://fonts.google.com/ ,iconos de https://fontawesome.com/icons y el script de boostrap que al final no lo use 
+        pero tenia itencion de hacer botones con boostrap https://getbootstrap.com/docs/5.0/getting-started/download/
+        Tambien pues uno el javascript y el style.css
+     -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200&family=Gloria+Hallelujah&family=Poppins:wght@200&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Inconsolata:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Tablas</title>
+</head>
+
+<body>
+    <form name="calculadora">
+        <div class="centro222">
+            <table>
+                <td class="filax" colspan="4">
+                    <div class="containerx">
+                        <div class="calculadora">
+                            Calculadora MEDAC
+                        </div>
+                        <!-- Poner iconos de minimizar,maximizar... -->
+                        <div class="calculadoraderecha">
+                            <i class="fas fa-window-minimize iconosx"></i><i
+                                class="far fa-window-maximize iconosx"></i><i class="fas fa-times iconosx"></i>
+                        </div>
+                    </div>
+                </td>
+                <tr class="filas">
+                    <td class="calctop" colspan="4">
+                        <input id="fixTextCalcTop" type="textfield" name="calc" value="" autocomplete="off" readonly>
+                    </td>
+                </tr>
+                <div>
+                    <tr>
+                        <!-- Funcion para evaluar raiz cuadrada -->
+                        <td class="calcunder colorcalcunder"
+                            onclick="document.calculadora.calc.value=raizCuadrada(document.calculadora.calc.value)">
+                            √
+                        </td>
+                        <td class="calcunder colorigual" onclick="document.calculadora.calc.value=''">
+                            C
+                        </td>
+                        <!-- Funcion para eliminar el de la izquierda -->
+                        <td class="calcunder colorigual"
+                            onclick="document.calculadora.calc.value=borrar(document.calculadora.calc.value)"
+                            aria-hidden="true">
+                            ←
+                        </td>
+                        <!-- Poner / en el form de calculadora-->
+                        <td class="calcunder colorcalcunder" onclick="document.calculadora.calc.value+='/'">
+                            ÷
+                        </td>
+                </div>
+                </tr>
+                <tr class="filas">
+                    <!-- Poner numero 7 en el form de calculadora-->
+                    <td class="calcunder" value="7" onclick="document.calculadora.calc.value+='7'">
+                        7
+                    </td>
+                    <!-- Poner numero 8 en el form de calculadora-->
+                    <td class="calcunder" value="8" onclick="document.calculadora.calc.value+='8'">
+                        8
+                    </td>
+                    <!-- Poner numero 9 en el form de calculadora-->
+                    <td class="calcunder" value="9" onclick="document.calculadora.calc.value+='9'">
+                        9
+                    </td>
+                    <!-- Poner * en el form de calculadora-->
+                    <td class="calcunder colorcalcunder" onclick="document.calculadora.calc.value+='*'">
+                        X
+                    </td>
+                </tr>
+                <tr class="filas">
+                    <!-- Poner numero 4 en el form de calculadora-->
+                    <td class="calcunder" onclick="document.calculadora.calc.value+='4'">
+                        4
+                    </td>
+                    <!-- Poner numero 5 en el form de calculadora-->
+                    <td class="calcunder" value="5" onclick="document.calculadora.calc.value+='5'">
+                        5
+                    </td>
+                    <!-- Poner numero 6 en el form de calculadora-->
+                    <td class="calcunder" onclick="document.calculadora.calc.value+='6'">
+                        6
+                    </td>
+                    <!-- Restar numeros de la calculadora-->
+                    <td class="calcunder colorcalcunder" onclick="document.calculadora.calc.value+='-'">
+                        ⎯
+                    </td>
+                </tr>
+                <tr class="filas">
+                    <!-- Poner numero 1 en el form de calculadora-->
+                    <td class="calcunder" onclick="document.calculadora.calc.value+='1'">
+                        1
+                    </td>
+                    <!-- Poner numero 2 en el form de calculadora-->
+                    <td class="calcunder" onclick="document.calculadora.calc.value+='2'">
+                        2
+                    </td>
+                    <!-- Poner numero 3 en el form de calculadora-->
+                    <td class="calcunder" onclick="document.calculadora.calc.value+='3'">
+                        3
+                    </td>
+                    <!--  Sumar numeros de la calculadora-->
+                    <td class="calcunder colorcalcunder" onclick="document.calculadora.calc.value+='+'">
+                        +
+                    </td>
+                </tr>
+                <tr class="filas">
+                    <!-- Poner numero 0 en el form de calculadora-->
+                    <td class="calcunder" onclick="document.calculadora.calc.value+='0'">
+                        0
+                    </td>
+                    <!-- Numeros decimales-->
+                    <td class="calcunder" onclick="document.calculadora.calc.value+='.'">
+                        .
+                    </td>
+                    <!-- Hacer modulo del form de la calculadora-->
+                    <td class="calcunder" onclick="document.calculadora.calc.value+='%'">
+                        %
+                    </td>
+                    <!-- Funcion predefinida por JavaScript la cual recoge todo lo que hay en el form de la calculadora y hace la operacion quue es debida-->
+                    <td class="calcunder colorcalcunder"
+                        onclick="document.calculadora.calc.value=eval(document.calculadora.calc.value)">
+                        =
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+
+</html>

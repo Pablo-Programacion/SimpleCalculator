@@ -1,0 +1,109 @@
+/* La calculadora esta hecha en un tabla */
+table,
+th,
+td {
+  border: 6px solid #ECEFF3;
+  border-collapse: collapse;
+}
+
+/* Parte de arriba de la calculadora */
+.calctop {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  padding-left: 22px;
+  padding-right: 10px;
+  font-weight: bolder;
+  font-size: 30px;
+  background-color: #b0ccbc;
+  box-shadow: 2px 2px 0px 2px rgba(0, 0, 0, 0.416) inset;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.416) inset;
+}
+
+/* Parte de abajo de la calculadora */
+.calcunder {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: rgba(0, 0, 0, 0.418);
+  text-align: center;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.092) inset;
+  transition: all 0.3s ease;
+}
+
+/* Transicion a los botones de la calculadora */
+.calcunder:hover {
+  background-color: rgba(0, 0, 0, 0.511);
+}
+
+/* Colores de la parte de abajo */
+.colorcalcunder {
+  background-color: #0494e4;
+  transition: all 0.3s ease;
+}
+
+/* Transiciones de la parte de abajo */
+.colorcalcunder:hover {
+  background-color: #1f7aac
+}
+
+/* Colores de los botones de borrar */
+.colorigual {
+  background-color: #f6db7c;
+  transition: all 0.3s ease;
+}
+
+/* Colores de los bootones de borrar */
+.colorigual:hover {
+  background-color: #debe4a;
+}
+
+/* Ya que son 3 icones en linea añado esto */
+.iconosx {
+  padding-right: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* Va a ser un container de la parte superior de la calccladora */
+.containerx {
+  padding-left: 7px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px;
+  opacity: 90%;
+}
+
+/* Dando estilos a los inputs  */
+input {
+  background-color: transparent;
+  border: 0px solid;
+  border-radius: 15px;
+}
+
+/* Barra de navegacion de la calculadora */
+.filax {
+  background-color: rgba(0, 0, 0, 0.418);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* Centrar calculadora */
+.centro222 {
+  position: absolute;
+  top: 250px;
+  left: 790px;
+  box-shadow: 2px 0px 2px 10px rgba(0, 0, 0, 0.088) inset;
+  margin: 0px;
+}
+
+/* Poner el cursor de la mano en todo el td */
+td {
+  cursor: pointer;
+}
+
+/* Centrar calculadora a la derecha */
+#fixTextCalcTop {
+  text-align: right;
+}
